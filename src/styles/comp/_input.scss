@@ -1,0 +1,39 @@
+.shorten {
+  height: fit-content;
+  background-image: url("/public/images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: var(--dark-violet);
+  border-radius: 10px;
+  padding: 1.7rem;
+  position: absolute;
+  top: -4.6rem;
+  width: 90%;
+}
+.shorten input {
+  color: white;
+  width: 100%;
+  outline: 2px solid transparent;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: white;
+}
+.features {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  padding-bottom: 5rem;
+  margin-top: 9rem;
+  position: relative;
+  background-color: #f0f1f6;
+}
+.err-msg {
+  color: var(--red);
+  font-style: italic;
+  font-size: 14px;
+  height: fit-content;
+  width: 100%;
+}

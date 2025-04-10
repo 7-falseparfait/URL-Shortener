@@ -1,0 +1,36 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+.btn-soft {
+  border-radius: 6px;
+}
+.btn-hard {
+  border-radius: 0;
+}
+.btn-circle {
+  border-radius: 50%;
+}
+.btn-rounded {
+  border-radius: 6px;
+}
+
+.btn-pill {
+  border-radius: 9999px;
+}
+.btn-primary {
+  background-color: var(--cyan);
+}
+.btn span {
+  color: white;
+}
+
+.copy-btn {
+  &.copied {
+    background-color: var(--dark-violet); // active/copy-clicked color
+  }
+}

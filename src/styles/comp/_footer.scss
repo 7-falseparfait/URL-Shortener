@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--very-dark-violet);
+  color: white;
+  li {
+    font-size: 14px;
+  }
+  img {
+    filter: brightness(0) invert(1);
+  }
+}

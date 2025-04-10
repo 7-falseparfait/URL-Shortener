@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  // Primary Colors
+  --cyan: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+
+  // Secondary Color
+  --red: hsl(0, 87%, 67%);
+
+  // Neutral Colors
+  --gray: hsl(0, 0%, 75%);
+  --violet: hsl(257, 7%, 63%);
+  --very-dark-blue: hsl(255, 11%, 22%);
+  --very-dark-violet: hsl(260, 8%, 14%);
+  --font-primary: "Nunito Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $font-primary;
+  margin: auto;
+  overflow-x: hidden;
+}
+.iconify {
+  font-size: 24px;
+}
+h1,
+h2,
+h3 {
+  color: var(--very-dark-blue);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  line-height: 28px;
+}
+/* Remove default styles from <li> */
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+input {
+  all: unset;
+  /* Resets all styles to default */
+  box-sizing: border-box;
+  /* To ensure width/height calculations include padding and borders */
+  font: inherit; /* Ensures font styles are inherited from the parent */
+}
+button {
+  all: unset;
+  /* Resets all styles to default */
+  box-sizing: border-box;
+  font: inherit;
+  cursor: pointer;
+  /* Ensures the button retains its clickability */
+}
+footer {
+  margin-top: 5rem;
+}
+p {
+  font-size: 16px;
+}

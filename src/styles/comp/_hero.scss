@@ -1,0 +1,18 @@
+.hero-img-container {
+  height: 40vh;
+  display: flex;
+  justify-content: flex-end;
+  img {
+    margin-top: 1rem;
+    width: 129%;
+    object-fit: contain;
+    transform: scale(1.2) translateX(30%);
+  }
+}
+
+.hero-content p {
+  color: var(--gray);
+}
+.hero-section {
+  margin: 0rem 2rem;
+}

@@ -1,0 +1,29 @@
+.mobile-menu {
+  height: fit-content;
+  background: var(--dark-violet);
+  width: 92%;
+  top: 4%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 41%;
+  transform: translateX(-40%);
+  border-radius: 12px;
+}
+.menu-items {
+  color: white;
+}
+.login {
+  width: 100%;
+  border-top: 1px solid var(--violet);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// --gray: hsl(0, 0%, 75%);
+// --violet: hsl(257, 7%, 63%);
+// --very-dark-blue: hsl(255, 11%, 22%);
+// --very-dark-violet: hsl(260, 8%, 14%);

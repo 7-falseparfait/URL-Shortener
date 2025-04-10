@@ -1,0 +1,51 @@
+.feature-card {
+  border-radius: 8px;
+  margin: 0rem 2rem 0rem;
+  padding: 1rem;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  p {
+    margin-top: 1rem;
+    font-size: 15px;
+    color: var(--violet);
+  }
+  h3 {
+    margin-top: 3rem;
+  }
+}
+.feature-img {
+  background-color: var(--dark-violet);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -16%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  img {
+    width: 50%;
+    object-fit: contain;
+  }
+}
+.yo {
+  height: 5rem;
+  width: 7px;
+  margin: auto;
+  background-color: var(--cyan);
+}
+.feature-container > :first-child {
+  margin-top: 5rem;
+}
+.feature-container > :last-child {
+  .yo {
+    display: none !important;
+  }
+}
