@@ -37,3 +37,38 @@
   height: fit-content;
   width: 100%;
 }
+
+@media (min-width: 768px) {
+  .shorten {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: -3.3rem;
+    width: 93%;
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+    padding: 2rem;
+  }
+  .shorten input {
+    height: 3rem !important;
+    padding: 0rem 0.5rem !important;
+    width: 75%;
+  }
+  .shorten-btn {
+    width: 20% !important;
+    margin-top: 0rem !important;
+    padding: 0.65rem 0rem !important;
+  }
+  .err-msg {
+    position: absolute;
+    bottom: 2%;
+    font-size: 12px !important;
+  }
+  .statistics h2 {
+    text-align: center !important;
+    font-size: 26px !important;
+  }
+  .statistics p {
+    font-size: 19px !important;
+  }
+}

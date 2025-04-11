@@ -35,6 +35,9 @@ function App() {
         const message = e.message.split("API Error: ")[1].split(" (")[0];
         console.log(message);
         setErrMessage(message);
+      } else if (e.message.includes("Unexpected token")) {
+        const message = "Poor or no Internet Connection 📡";
+        setErrMessage(message);
       } else setErrMessage(e.message);
     }
   };
@@ -60,23 +63,23 @@ function Header({ menuOpen, setMenuOpen }) {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
-    <div className="flex space-btw centered  pd-03 mx-1">
+    <div className="flex space-btw centered  pd-03 mx-1 header">
       <img src="/images/logo.svg" alt="Logo" />
       <button
         onClick={toggleMenu}
         value={menuOpen}
-        className="bg-none border-none"
+        className="bg-none border-none harmbugger"
       >
         <FontAwesomeIcon
           icon={faBars}
           style={{ color: "#9c9ba3", fontSize: "27px" }}
         />
       </button>
-      {/* Menu (optional): only show if open */}
       {menuOpen && (
         <div className="mobile-menu pd-3">
           {menu.map((item, i) => (
             <h2
+              key={i}
               className={` menu-items ${
                 i === menu.length - 1 ? "mt-2 pt-2 login" : "mb-2"
               }`}
@@ -87,13 +90,26 @@ function Header({ menuOpen, setMenuOpen }) {
           <Button
             shape="pill"
             variant="primary"
-            className="mt-1 py-1 px-3 font-19 text-white w-full "
+            className="mt-1 py-1 px-2 font-19 text-white w-full "
           >
             {" "}
             Sign Up
           </Button>
         </div>
       )}
+      <div className="desktop-menu centered space-btw">
+        <div className="left flex centered gap-2">
+          {menu.slice(0, 3).map((item, i) => (
+            <p key={i}>{item}</p>
+          ))}
+        </div>
+        <div className="right flex gap-1 centered">
+          {menu.slice(3, 4).map((item, i) => (
+            <p key={i}>{item}</p>
+          ))}
+          <Button className="text-white py-05 px-2 btn-pill">Sign Up</Button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -126,20 +142,22 @@ function Hero({ menuOpen }) {
       >
         <img src="/images/illustration-working.svg" alt="" />
       </div>
-      <div className="hero-content mt-3 text-center">
+      <div className="hero-content mt-3 text-center mx-2">
         <h2 className="font-38">More than just shorter links</h2>
         <p className="mt-05">
           {" "}
           Build your brand’s recognition and get detailed insights on how your
           links are performing.
         </p>
-        <Button
-          shape="pill"
-          variant="primary"
-          className="mt-2 py-1 px-3 font-19"
-        >
-          <span>Get started</span>
-        </Button>
+        <div className="get-started">
+          <Button
+            shape="pill"
+            variant="primary"
+            className="mt-2 py-1 px-3 font-19"
+          >
+            <span>Get started</span>
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -222,9 +240,9 @@ function InputArea({ handleShorten, setURL, url, Urlcards, errMessage }) {
             outline: errMessage ? "2px solid var(--red)" : "",
           }}
         />
-        <p className="err-msg">{errMessage}</p>
+        <p className={`err-msg ${errMessage ? "" : "hidden"}`}>{errMessage}</p>
         <Button
-          className="px-2 py-05 font-17 w-full mt-09"
+          className="px-2 py-05 font-17 w-full mt-09 shorten-btn"
           onClick={handleShorten}
         >
           <span>Shorten It!</span>
@@ -238,7 +256,7 @@ function InputArea({ handleShorten, setURL, url, Urlcards, errMessage }) {
           isFirst={i === 0}
         />
       ))}
-      <div className="text-center mx-2 mt-9">
+      <div className="text-center statistics mx-2 mt-9">
         <h2 className="mb-1"> Advanced Statistics</h2>
         <p style={{ color: "#a5a3ae" }}>
           Track how your links are performing across the web with our advanced
