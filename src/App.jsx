@@ -14,7 +14,7 @@ function App() {
     try {
       console.log(url);
       if (!url) throw new Error("Please add a link");
-      const response = await fetch("api/shorten", {
+      const response = await fetch("API/shorten", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
