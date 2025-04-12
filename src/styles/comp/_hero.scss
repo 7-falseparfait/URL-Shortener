@@ -17,9 +17,15 @@
 .hero-content p {
   color: var(--gray);
 }
+.header img {
+  width: 19%;
+}
 @media (min-width: 768px) {
   .header {
     padding: 1rem 1rem !important;
+  }
+  .header img {
+    width: 8%;
   }
   .hero-img-container {
     height: 50vh;

@@ -14,12 +14,12 @@ function App() {
     try {
       console.log(url);
       if (!url) throw new Error("Please add a link");
-      const response = await fetch("api/v1/shorten", {
+      const response = await fetch("api/shorten", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: `url=${encodeURIComponent(url)}`,
+        body: JSON.stringify({ url }),
       });
 
       if (!response.ok) {

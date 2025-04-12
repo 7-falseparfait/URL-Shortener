@@ -11,6 +11,11 @@
   ul {
     text-align: center;
   }
+  .footer-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media (min-width: 768px) {
   .footer {
@@ -75,6 +80,7 @@
   .footer-img-container img {
     width: 100%;
     object-fit: contain;
+    transform: translateY(-95%);
   }
   .links {
     display: flex !important;

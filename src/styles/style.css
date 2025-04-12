@@ -341,9 +341,16 @@ p {
   color: var(--gray);
 }
 
+.header img {
+  width: 19%;
+}
+
 @media (min-width: 768px) {
   .header {
     padding: 1rem 1rem !important;
+  }
+  .header img {
+    width: 8%;
   }
   .hero-img-container {
     height: 50vh;
@@ -717,6 +724,11 @@ button:hover {
 .footer ul {
   text-align: center;
 }
+.footer .footer-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (min-width: 768px) {
   .footer {
@@ -784,6 +796,7 @@ button:hover {
     width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
+    transform: translateY(-95%);
   }
   .links {
     display: flex !important;

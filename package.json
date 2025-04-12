@@ -1,5 +1,4 @@
 {
-  "proxy": "https://cleanuri.com",
   "name": "url-shortener",
   "version": "0.1.0",
   "private": true,

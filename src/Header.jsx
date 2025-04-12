@@ -7,7 +7,7 @@ export function Header({ menuOpen, setMenuOpen }) {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
-    <div className="flex space-btw centered  pd-03 mx-1 header">
+    <div className="flex space-btw centered  py-1 mx-1 header">
       <img src="/images/logo.svg" alt="Logo" />
       <button
         onClick={toggleMenu}
