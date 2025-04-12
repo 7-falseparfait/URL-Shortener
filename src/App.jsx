@@ -23,9 +23,18 @@ function App() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Something went wrong");
+        let message = "Something went wrong";
+
+        try {
+          const errorData = await response.json();
+          message = errorData.error || message;
+        } catch {
+          message = "No response body or not valid JSON";
+        }
+
+        throw new Error(message);
       }
+
       if (response.ok) setErrMessage("");
       const data = await response.json();
       setUrlCards((prev) => [
