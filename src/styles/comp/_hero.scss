@@ -48,11 +48,11 @@
     place-content: center;
   }
   .hero-img-container {
-    width: 50%;
+    width: 60%;
     img {
       width: 120%;
       object-fit: contain;
-      transform: scale(1.2) translateX(15%);
+      transform: scale(1.2) translateX(22.4%);
     }
   }
   .hero-content h2 {
@@ -88,4 +88,13 @@
   img {
     object-fit: cover;
   }
+}
+.pointer {
+  color: gray;
+}
+.ttl:hover {
+  color: var(--cyan) !important;
+}
+.icon img :hover {
+  fill: var(--cyan);
 }

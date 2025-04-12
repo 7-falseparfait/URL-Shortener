@@ -7,16 +7,46 @@
     font-size: 15px;
     padding: 0.1rem 1rem;
   }
-  height: 9rem;
+  height: fit-content;
+  padding-bottom: 1rem;
   width: 90%;
   background-color: white;
   border-radius: 6px;
 }
-.card-url p:first-child {
+.originalUrl {
   border-bottom: 1px solid var(--gray);
 }
 
 .card-url p:nth-child(2) {
   padding-top: 0.7rem;
   color: var(--cyan);
+}
+@media (min-width: 768px) {
+  .temp {
+    margin-top: 5rem !important;
+  }
+  .card-url {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem;
+  }
+  .originalUrl {
+    border-bottom: none;
+    width: 50%;
+  }
+  .shortlink-container {
+    display: flex;
+    align-items: center;
+  }
+  .shortlink {
+    width: 45%;
+    margin-top: 0 !important;
+  }
+  .copy-btn-container {
+    width: 55% !important;
+    height: 100%;
+  }
 }

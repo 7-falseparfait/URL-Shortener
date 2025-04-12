@@ -372,13 +372,13 @@ p {
     place-content: center;
   }
   .hero-img-container {
-    width: 50%;
+    width: 60%;
   }
   .hero-img-container img {
     width: 120%;
     -o-object-fit: contain;
        object-fit: contain;
-    transform: scale(1.2) translateX(15%);
+    transform: scale(1.2) translateX(22.4%);
   }
   .hero-content h2 {
     font-size: 56px !important;
@@ -415,6 +415,18 @@ p {
        object-fit: cover;
   }
 }
+.pointer {
+  color: gray;
+}
+
+.ttl:hover {
+  color: var(--cyan) !important;
+}
+
+.icon img :hover {
+  fill: var(--cyan);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -454,6 +466,10 @@ p {
 
 .copy-btn.copied {
   background-color: var(--dark-violet);
+}
+
+button:hover {
+  background-color: #9be2e2;
 }
 
 .shorten {
@@ -637,7 +653,7 @@ p {
   .feature-card {
     margin: 0rem;
     width: 35rem;
-    height: 15rem;
+    height: 18rem;
     padding: 0rem 2rem;
   }
   .feature-container {
@@ -651,7 +667,7 @@ p {
     text-align: left;
   }
   .feature-container h3 {
-    margin-top: 0.7rem !important;
+    margin-top: 0.6rem !important;
     font-size: 20px;
     text-align: left !important;
     width: 100%;
@@ -697,11 +713,89 @@ p {
 .footer img {
   filter: brightness(0) invert(1);
 }
+.footer .links h4,
+.footer ul {
+  text-align: center;
+}
 
 @media (min-width: 768px) {
-  .footer-section {
+  .footer {
     display: flex;
-    border: 2px solid red;
+    padding: 0 2rem;
+    justify-content: space-between;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  li {
+    font-size: 14px;
+    padding-top: 0.3rem;
+  }
+  h4 {
+    font-size: 17px;
+    margin-top: 0rem !important;
+    padding-top: 0rem !important;
+  }
+  .footer-img-container {
+    width: 8%;
+  }
+  .footer-img-container img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    width: 50%;
+    padding: 0.5rem;
+  }
+  .social-icons {
+    height: 100%;
+    margin-top: 0rem !important;
+    padding: 0.8rem;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  .footer li {
+    font-size: 18px;
+    padding-top: 0.5rem;
+  }
+  .footer h4 {
+    font-size: 20px;
+    margin-top: 0rem !important;
+    padding-top: 0rem !important;
+  }
+  .footer-img-container {
+    width: 8%;
+  }
+  .footer-img-container img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    width: 50%;
+    padding: 0.5rem;
+  }
+  .social-icons {
+    height: 100%;
+    margin-top: 0rem !important;
+    padding: 0.8rem;
   }
 }
 .mobile-menu {
@@ -733,7 +827,9 @@ p {
 }
 
 .card-url {
-  height: 9rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 1rem;
   width: 90%;
   background-color: white;
   border-radius: 6px;
@@ -746,7 +842,7 @@ p {
   padding: 0.1rem 1rem;
 }
 
-.card-url p:first-child {
+.originalUrl {
   border-bottom: 1px solid var(--gray);
 }
 
@@ -755,6 +851,35 @@ p {
   color: var(--cyan);
 }
 
+@media (min-width: 768px) {
+  .temp {
+    margin-top: 5rem !important;
+  }
+  .card-url {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem;
+  }
+  .originalUrl {
+    border-bottom: none;
+    width: 50%;
+  }
+  .shortlink-container {
+    display: flex;
+    align-items: center;
+  }
+  .shortlink {
+    width: 45%;
+    margin-top: 0 !important;
+  }
+  .copy-btn-container {
+    width: 55% !important;
+    height: 100%;
+  }
+}
 .flex {
   display: flex;
 }
@@ -1699,6 +1824,7 @@ p {
 
 .pointer:hover {
   cursor: pointer;
+  color: black;
 }
 
 .white {
